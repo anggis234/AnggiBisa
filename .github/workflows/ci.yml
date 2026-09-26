@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./web
 
     steps:
     # Mengambil kode dari repository
@@ -23,10 +26,8 @@ jobs:
 
     # Menginstal dependensi
     - name: Install dependencies
-      working-directory: web
       run: npm install
 
     # Menjalankan script test
     - name: Run tests
-      working-directory: web
       run: npm test
