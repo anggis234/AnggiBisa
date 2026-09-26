@@ -28,4 +28,5 @@ jobs:
 
     # Menjalankan script test
     - name: Run tests
+      working-directory: web
       run: npm test
