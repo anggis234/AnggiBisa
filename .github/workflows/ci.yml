@@ -23,6 +23,7 @@ jobs:
 
     # Menginstal dependensi
     - name: Install dependencies
+      working-directory: web
       run: npm install
 
     # Menjalankan script test
